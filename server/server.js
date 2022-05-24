@@ -1,5 +1,6 @@
 require('dotenv').config()
 const PORT = process.env.PORT || 3002
+const FRONTEND = process.env.FRONTEND_APP || "http://localhost:3000"
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -11,7 +12,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: FRONTEND,
     methods: ["GET", "POST"],
   },
 });
