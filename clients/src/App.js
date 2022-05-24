@@ -5,7 +5,7 @@ import Chat from "./components/Chat";
 import Player from "./components/Player";
 import { Container, Row, Col } from 'react-grid-system'
 
-const socket = io.connect(process.env.BACKEND_APP)
+const socket = io.connect('https://socket-io-testing-sheng.herokuapp.com')
 
 function App() {
   const [username, setUsername] = useState("")
