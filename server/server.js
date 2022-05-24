@@ -34,6 +34,10 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get('/', (req,res) =>{
+  res.send('HELLO WORLD')
+})
+
 server.listen(PORT, () => {
   console.log(`SERVER RUNNING ON PORT ${3001}`);
 });
