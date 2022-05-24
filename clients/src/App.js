@@ -5,17 +5,17 @@ import Chat from "./components/Chat";
 import Player from "./components/Player";
 import { Container, Row, Col } from 'react-grid-system'
 
-const socket = io.connect(process.env.BACKEND_APP || "http://localhost:3001");
+const socket = io.connect(process.env.BACKEND_APP || "http://localhost:3001")
 
 function App() {
-  const [username, setUsername] = useState("");
-  const [room, setRoom] = useState("");
-  const [showChat, setShowChat] = useState(false);
+  const [username, setUsername] = useState("")
+  const [room, setRoom] = useState("")
+  const [showChat, setShowChat] = useState(false)
 
   const joinRoom = () => {
     if (username !== "" && room !== "") {
-      socket.emit("join_room", room);
-      setShowChat(true);
+      socket.emit("join_room", room)
+      setShowChat(true)
     }
   };
 
