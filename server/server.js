@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: FRONTEND,
+    origin: "https://socket-io-testing-frontend.netlify.app",
     methods: ["GET", "POST"],
   },
 });
