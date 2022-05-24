@@ -1,3 +1,5 @@
+require('dotenv').config()
+const PORT = process.env.PORT || 3002
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -31,6 +33,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3001, () => {
-  console.log("SERVER RUNNING ON PORT 3001");
+server.listen(PORT, () => {
+  console.log(`SERVER RUNNING ON PORT ${3001}`);
 });
