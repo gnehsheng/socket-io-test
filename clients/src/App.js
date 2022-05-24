@@ -5,7 +5,7 @@ import Chat from "./components/Chat";
 import Player from "./components/Player";
 import { Container, Row, Col } from 'react-grid-system'
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect(process.env.BACKEND_APP || "http://localhost:3001");
 
 function App() {
   const [username, setUsername] = useState("");
